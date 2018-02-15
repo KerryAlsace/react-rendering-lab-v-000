@@ -45,9 +45,9 @@ describe('Animation', () => {
       className: "off"
     })
 
-    const wrapper = shallow(<Animation/>);
+    const wrapper = shallow(<Animation />);
     const spy = sinon.spy(wrapper.instance(), 'showLoadingBar')
-    wrapper.instance().componentWillUpate()
+    wrapper.instance().componentWillUpdate()
     expect(spy.calledOnce).to.be.true
     selector.restore()
   });
@@ -61,7 +61,7 @@ describe('Pikachu', () => {
       weight: 100
     })
 
-    const wrapper = shallow(<Pikachu/>);
+    const wrapper = shallow(<Pikachu />);
     const spy = sinon.spy(wrapper.instance(), 'resizePikachu')
     wrapper.instance().componentDidUpdate()
     expect(spy.calledOnce).to.be.true
